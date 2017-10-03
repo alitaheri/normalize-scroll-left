@@ -15,7 +15,7 @@ Browser        | Type          | Most Left | Most Right | Initial
 -------------- | ------------- | --------- | ---------- | -------
 WebKit         | default       | 0         | 100        | 100
 Firefox/Opera  | negative      | -100      | 0          | 0
-IE             | reverse       | 100       | 0          | 0
+IE/Edge        | reverse       | 100       | 0          | 0
 
 ## Installation
 
@@ -37,7 +37,7 @@ function detectScrollType(): ScrollType;
 ```
 
 This function returns the scroll type detected, Keep in mind, this function
-cahces the result as it should render a dummy on the dom (which is expensive).
+caches the result as it should render a dummy on the DOM (which is expensive).
 Make sure the first invocation of this function happens **after** the body is loaded.
 
 **note**: To support server-side-rendering, it will output `indeterminate` if
@@ -55,7 +55,7 @@ Browser        | Type
 -------------- | -------------
 WebKit         | `default`
 Firefox/Opera  | `negative`
-IE             | `reverse`
+IE/Edge        | `reverse`
 Other/Server   | `indeterminate`
 
 ### `getNormalizedScrollLeft`
@@ -114,7 +114,7 @@ setNormalizedScrollLeft(element, 20, 'rtl');
 // Will set element.scrollLeft to ...
 //  20 in WebKit (chrome)
 //  -60 in Firefox/Opera
-//  60 in IE
+//  60 in IE/Edge
 // Does nothing on the server
 ```
 
