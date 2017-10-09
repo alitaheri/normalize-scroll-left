@@ -1,7 +1,7 @@
 export type ScrollType = 'indeterminate' | 'default' | 'negative' | 'reverse';
 
-// Based on https://stackoverflow.com/a/31090240
-const isBrowser = new Function('try {return this===window;}catch(e){ return false;}');
+// Based on https://github.com/react-bootstrap/dom-helpers/blob/master/src/util/inDOM.js
+const inDOM = !!(typeof window !== 'undefined' && window.document && window.document.createElement);
 
 let cachedType: ScrollType;
 
@@ -15,11 +15,11 @@ export function detectScrollType(): ScrollType {
     return cachedType;
   }
 
-  if (!isBrowser() || !document || !document.body) {
+  if (!inDOM || !window.document.body) {
     return 'indeterminate';
   }
 
-  const dummy = document.createElement('div');
+  const dummy = window.document.createElement('div');
 
   dummy.appendChild(document.createTextNode('ABCD'));
   dummy.dir = 'rtl';

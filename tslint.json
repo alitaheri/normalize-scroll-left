@@ -65,7 +65,6 @@
 		"no-switch-case-fall-through": true,
 		"no-string-throw": true,
 		"no-trailing-whitespace": true,
-		"no-typeof-undefined": true,
 		"no-unexpected-multiline": true,
 		"no-unnecessary-bind": true,
 		"no-unnecessary-field-initialization": true,
