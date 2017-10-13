@@ -25,7 +25,7 @@
   "scripts": {
     "build": "rimraf lib && tsc",
     "prepublishOnly": "npm run build",
-    "lint": "tslint -e \"node_modules/**\" \"**/*.ts\"",
+    "lint": "tslint -e \"node_modules/**\" \"src/**/*.ts\"",
     "test": "mocha --compilers ts:ts-node/register \"src/**/*.spec.ts\""
   },
   "license": "MIT",
@@ -34,7 +34,7 @@
   "devDependencies": {
     "@types/chai": "^4.0.4",
     "@types/mocha": "^2.2.43",
-    "@types/node": "^8.0.33",
+    "@types/node": "^8.0.34",
     "chai": "^4.1.2",
     "mocha": "^4.0.1",
     "rimraf": "^2.6.2",
