@@ -7,7 +7,8 @@
     "email": "ali.taheri.m@gmail.com"
   },
   "files": [
-    "lib"
+    "cjs",
+    "esm"
   ],
   "repository": {
     "type": "git",
@@ -23,14 +24,15 @@
     "element"
   ],
   "scripts": {
-    "build": "rimraf lib && tsc",
+    "build": "rimraf cjs esm && tsc --module commonjs --outDir cjs && tsc --module es6 --outDir esm",
     "prepublishOnly": "npm run build",
     "lint": "tslint -e \"node_modules/**\" \"src/**/*.ts\"",
     "test": "mocha --compilers ts:ts-node/register \"src/**/*.spec.ts\""
   },
   "license": "MIT",
-  "main": "lib/main.js",
-  "types": "lib/main.d.ts",
+  "main": "cjs/main.js",
+  "module": "esm/main.js",
+  "types": "cjs/main.d.ts",
   "devDependencies": {
     "@types/chai": "^4.0.4",
     "@types/mocha": "^2.2.43",
