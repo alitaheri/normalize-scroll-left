@@ -1,9 +1,7 @@
 {
   "compilerOptions": {
     "rootDir": "src",
-    "outDir": "lib",
     "target": "es5",
-    "module": "commonjs",
     "alwaysStrict": true,
     "noEmitOnError": false,
     "strictNullChecks": true,
