@@ -51,7 +51,7 @@ export function detectScrollType(): ScrollType {
 export function getNormalizedScrollLeft(element: HTMLElement, direction: 'rtl' | 'ltr'): number {
   const scrollLeft = element.scrollLeft;
 
-  // Perform the calculations only when direction is rtl to avoid messing up the ltr bahavior
+  // Perform the calculations only when direction is rtl to avoid messing up the ltr behavior
   if (direction !== 'rtl') {
     return scrollLeft;
   }
@@ -77,7 +77,7 @@ export function setNormalizedScrollLeft(
   scrollLeft: number,
   direction: 'rtl' | 'ltr',
 ): void {
-  // Perform the calculations only when direction is rtl to avoid messing up the ltr bahavior
+  // Perform the calculations only when direction is rtl to avoid messing up the ltr behavior
   if (direction !== 'rtl') {
     element.scrollLeft = scrollLeft;
     return;
