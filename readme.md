@@ -2,7 +2,7 @@
 
 This library normalizes the `Element.scrollLeft` property when direction is `rtl`.
 
-All the hardwork are based on [this juqery plugin](https://github.com/othree/jquery.rtl-scroll-type)
+All the hardwork are based on [this jquery plugin](https://github.com/othree/jquery.rtl-scroll-type)
 and [this stackoverflow answer](https://stackoverflow.com/a/24394376).
 
 Since `Element.scrollLeft`'s behavior with `dir="rtl"` is not defined in any spec we use
